@@ -14,13 +14,20 @@
         height: 100%;
         /*z-index: -1;*/
     }
+
+    .unselectable {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <div id="particles-js"></div>
         <v-app class="teal">
+            <div id="particles-js" class="hidden-sm-and-down"></div>
             <v-toolbar flat absolute class="transparent">
                 <v-spacer></v-spacer>
                 <v-toolbar-items class="hidden-sm-and-down">
@@ -43,12 +50,14 @@
                     <v-jumbotron>
                         <v-layout align-center justify-center>
                             <v-flex text-xs-center class="myWhite--text">
-                                <h1 class="display-4">GeekApk</h1>
-                                <div class="headline mb-4">纯净的应用社区</div>
+                                <h1 class="display-4 unselectable hidden-sm-and-down">GeekApk</h1>
+                                <div class="headline mb-4 unselectable hidden-sm-and-down">纯净的应用社区</div>
+                                <h1 class="display-3 unselectable hidden-md-and-up">GeekApk</h1>
+                                <div class="title mb-4 unselectable hidden-md-and-up">纯净的应用社区</div>
                                 <!-- <v-divider class="my-3 myYellow"></v-divider> -->
-                                <v-btn color="myWhite" class="mx-0 mainColor--text" href="https://geekapk.org/about">我们的故事</v-btn>
+                                <v-btn color="myWhite" class="mx-0 myBlack--text" href="https://geekapk.org/about">我们的故事</v-btn>
                                 <v-btn color="myWhite" class="mx-0 myBlack--text" href="https://wiki.geekapk.org">应用 WIKI</v-btn>
-                                <v-btn color="myWhite" class="mx-0 myBlack--text" href="https://geekapk.org/web">加入社区</v-btn>
+                                <v-btn color="myWhite" class="mx-0 mainColor--text" href="https://geekapk.org/web">加入社区</v-btn>
                             </v-flex>
                         </v-layout>
                     </v-jumbotron>
